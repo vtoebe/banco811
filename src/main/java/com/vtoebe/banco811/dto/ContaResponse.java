@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @AllArgsConstructor
 public class ContaResponse {
-    private Usuario usuario;
+    private UsuarioResponse usuario;
     private Integer numero;
     private Integer agencia;
     private TipoContaEnum tipoConta;
@@ -25,7 +25,7 @@ public class ContaResponse {
     private LocalDateTime dataAtualizacao;
 
     public ContaResponse(Conta conta){
-        this.usuario = conta.getUsuario();
+        this.usuario = new UsuarioResponse(conta.getUsuario());
         this.numero = conta.getNumero();
         this.agencia = conta.getAgencia();
         this.tipoConta = conta.getTipoConta();
