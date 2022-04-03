@@ -7,6 +7,7 @@ import com.vtoebe.banco811.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public UsuarioResponse create(@RequestBody UsuarioRequest usuarioRequest) {
+    public UsuarioResponse create(@RequestBody @Valid UsuarioRequest usuarioRequest) {
         return usuarioService.create(usuarioRequest);
     }
 
@@ -32,7 +33,7 @@ public class UsuarioController {
     }
 
     @PutMapping(path = "/{id}")
-    public Usuario update(@PathVariable Integer id, @RequestBody UsuarioRequest usuarioRequest){ return usuarioService.update(usuarioRequest, id); }
+    public Usuario update(@PathVariable Integer id, @RequestBody @Valid UsuarioRequest usuarioRequest){ return usuarioService.update(usuarioRequest, id); }
 
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable Integer id){usuarioService.delete(id);}
