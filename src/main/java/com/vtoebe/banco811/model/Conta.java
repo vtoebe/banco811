@@ -1,6 +1,5 @@
 package com.vtoebe.banco811.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vtoebe.banco811.dto.ContaRequest;
 import com.vtoebe.banco811.enums.TipoContaEnum;
 import lombok.Getter;

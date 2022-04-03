@@ -2,7 +2,6 @@ package com.vtoebe.banco811.dto;
 
 import com.vtoebe.banco811.enums.TipoContaEnum;
 import com.vtoebe.banco811.model.Conta;
-import com.vtoebe.banco811.model.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
